@@ -1,4 +1,10 @@
-const DiscountCouponField = ({
+import React from "react";
+
+interface Props {
+  onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+}
+
+const DiscountCouponField: React.FunctionComponent<Props> = ({
     onSubmit
 }) => {
     return (

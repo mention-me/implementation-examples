@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import MentionMe from "./components/MentionMe";
 import DiscountCouponField from "./components/DiscountCouponField";
@@ -7,7 +7,7 @@ const randomTotal = () => {
   return (Math.random() * 100).toFixed(2);
 }
 
-const App = () => {
+const App: React.VoidFunctionComponent = () => {
   const [total, setTotal] = useState(randomTotal());
   const [random, setRandom] = useState(Math.random());
 
@@ -26,7 +26,7 @@ const App = () => {
       Total: {total}<br />
       Random: {random}
       <MentionMe situation="checkout" locale="en_GB" implementation="link" />
-      <DiscountCouponField onSubmit={(event) => setTotal(randomTotal())} />
+      <DiscountCouponField onSubmit={() => setTotal(randomTotal())} />
     </div>
   );
 };
