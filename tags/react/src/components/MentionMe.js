@@ -1,7 +1,7 @@
 import { useEffect, memo } from "react";
 
 const ENDPOINT =
-  "https://tag-demo.mention-me.com/api/v2/referreroffer/mmb8366adb";
+  "https://tag-demo.mention-me.com/api/v2/referreroffer/mmbd3a737d";
 
 const MentionMe = ({ implementation, situation, locale }) => {
   useEffect(() => {
