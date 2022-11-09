@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		var mmScript = document.createElement('script');
+		mmScript.type = 'text/javascript';
+
+		var partnerCode = "PARTNER CODE GOES HERE"
+		var firstname = encodeURIComponent("FIRSTNAME GOES HERE")
+		var surname = encodeURIComponent("SURNAME GOES HERE")
+		var email = encodeURIComponent("EMAIL GOES HERE")
+    
+    // Change the situation to reflect where the user is seeing this page, e.g. postpurchase.
+    var situation = "postpurchase"
+
+    // Change this according to whether you're on a test site or not. It should be 
+    // true only on live sites with real customers.
+    var isProduction = false
+    
+    if (isProduction) {
+      var url = "https://tag.mention-me.com"
+    } else {
+      var url = "https://tag-demo.mention-me.com"
+    }
+    
+		mmScript.src = url + "/api/v2/referreroffer/" + partnerCode + "?" +
+			"firstname=" + firstname +
+			"&surname=" + surname +
+			"&email=" + email +
+			"&situation=" + situation;
+
+		document.head.appendChild(mmScript);
+		</script>
+	</head>
+	<body>
+		<p>Hello 👋. This is an example dynamic script for the Mention Me JavaScript tags. Please change to reflect your needs.</p>
+	</body>
+</html>
