@@ -9,18 +9,18 @@
 		var surname = encodeURIComponent("SURNAME GOES HERE")
 		var email = encodeURIComponent("EMAIL GOES HERE")
     
-    // Change the situation to reflect where the user is seeing this page, e.g. postpurchase.
-    var situation = "postpurchase"
+		// Change the situation to reflect where the user is seeing this page, e.g. postpurchase.
+		var situation = "postpurchase"
 
-    // Change this according to whether you're on a test site or not. It should be 
-    // true only on live sites with real customers.
-    var isProduction = false
-    
-    if (isProduction) {
-      var url = "https://tag.mention-me.com"
-    } else {
-      var url = "https://tag-demo.mention-me.com"
-    }
+		// Change this according to whether you're on a test site or not. It should be 
+		// true only on live sites with real customers.
+		var isProduction = false
+
+		if (isProduction) {
+			var url = "https://tag.mention-me.com"
+		} else {
+			var url = "https://tag-demo.mention-me.com"
+		}
     
 		mmScript.src = url + "/api/v2/referreroffer/" + partnerCode + "?" +
 			"firstname=" + firstname +
